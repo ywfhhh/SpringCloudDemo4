@@ -1,0 +1,16 @@
+#Ribbon负载均衡
+#Springcloud Ribbon 是一个负载均衡解决方案，由netflix提供的开源负载均衡器，基于Netflix Ribbon实现的，是一个对Http请求进行控制的负载均衡客户端
+#再注册中心注册Ribbon后就可以根据用户具体实际情况选择不同的负载均衡策略，当多个端口为一个请求提供服务时自动选择合适的端口
+
+#使用Ribbon就在RestTemplate对象上添加@LoadBalanced注解
+server:
+  port: 8040
+spring:
+  application:
+    name: ribbon
+eureka:
+  client:
+    service-url:
+      defaltZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true

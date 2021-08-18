@@ -1,0 +1,23 @@
+#与Ribbon一样，Feign也是由Netflix提供的声明式、模板化WebService客户端，它简化了
+#开发者编写Web服务端的操作，开发者可以通过简单的接口和注解来调用HTTP API
+#Feign它整合了Ribbon和Hystrix，具有可拔插、基于注解、负载均衡、服务熔断等一系列便捷功能
+#Feign是基于Ribbon实现的
+#Feign的特点
+#1.Feign是一个声明式WebService客户端
+#2.Feign是基于Ribbon实现的，使用简单
+#3.Feign支持Feign注解、SpringMVC注解和JAX-RS注解
+#4.Feign集成了Hystrix，具备熔断功能,具有容错功能
+server:
+  port: 8050
+spring:
+  application:
+    name: feign
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaltZone: http://localhost:8761/eureka/
+feign:
+  hystrix:
+    enabled: true #hystrix 熔断器

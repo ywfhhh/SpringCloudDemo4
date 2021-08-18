@@ -1,0 +1,16 @@
+#Zuul是Netflix提供的一个开源的API网关服务器，是客户端和服务器中间的，对外开放一个API,将所有
+#请求导入一个入口，屏蔽了服务端的具体实现逻辑，Zuul可以实现反向代理功能，在外部可实现动态路由、身份认证、IP过滤、数据监控等
+#Zuul还整合了Ribbon的负载均衡功能，即有多个服务器为同一模块提供服务时，不同服务器轮顺序流提供服务
+server:
+  port: 8030
+spring:
+  application:
+    name: gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/ #注册中心地址
+zuul:
+  routes:
+    provider: /p/** #路由设置 key - value 形式实现反向代理
+    consumer: /c/**
