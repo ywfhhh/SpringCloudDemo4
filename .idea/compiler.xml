@@ -7,15 +7,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="eurekaserver" />
         <module name="hystrix" />
         <module name="nativeconfigserver" />
         <module name="zipkin" />
+        <module name="githubconfigserver" />
         <module name="ribbon" />
         <module name="zipkinClient" />
-        <module name="eurekaclient" />
         <module name="zuul" />
         <module name="nativeconfigclient" />
+        <module name="githubconfigclient" />
+        <module name="eurekaserver" />
+        <module name="eurekaclient" />
         <module name="feign" />
         <module name="consumer" />
         <module name="resttemplate" />
@@ -29,6 +31,8 @@
       <module name="eurekaclient" options="-parameters" />
       <module name="eurekaserver" options="-parameters" />
       <module name="feign" options="-parameters" />
+      <module name="githubconfigclient" options="-parameters" />
+      <module name="githubconfigserver" options="-parameters" />
       <module name="hystrix" options="-parameters" />
       <module name="nativeconfigclient" options="-parameters" />
       <module name="nativeconfigserver" options="-parameters" />

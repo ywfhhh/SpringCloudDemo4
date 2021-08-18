@@ -21,6 +21,8 @@
         <module>nativeconfigclient</module>
         <module>zipkin</module>
         <module>zipkinClient</module>
+        <module>githubconfigserver</module>
+        <module>githubconfigclient</module>
     </modules>
 
     <properties>

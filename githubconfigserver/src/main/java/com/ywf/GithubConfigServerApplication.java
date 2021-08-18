@@ -6,8 +6,8 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 
 @SpringBootApplication
 @EnableConfigServer
-public class githubconfigApplication {
+public class GithubConfigServerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(githubconfigApplication.class,args);
+        SpringApplication.run(GithubConfigServerApplication.class,args);
     }
 }
