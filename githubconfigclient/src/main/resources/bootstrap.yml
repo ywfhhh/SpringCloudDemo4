@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    config:
+      name: configclient #配置的具体文件名，默认properties或者yml文件
+      label: master #GitHub远程码库的分支
+      discovery:
+        enabled: true
+        service-id: configserver #对应的配置服务Spring.Application.name
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

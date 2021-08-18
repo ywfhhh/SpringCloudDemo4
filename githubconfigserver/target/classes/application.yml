@@ -1,0 +1,15 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/ywfhhh/SpringCloudDemo4.git
+          search-paths: config
+          username: ywfhhh
+          password: ywfsgdsg1.
+      label: master
+
