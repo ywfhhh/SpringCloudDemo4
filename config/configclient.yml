@@ -1,6 +1,5 @@
 server:
   port: 8070
-foo: foo version 1
 eureka:
   client:
     serviceUrl:
@@ -8,3 +7,4 @@ eureka:
 spring:
   application:
     name: configclient
+foo: foo version 1
